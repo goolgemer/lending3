@@ -223,6 +223,10 @@ main {
     height: 76px;
   }
 
+  .main {
+    overflow-x: hidden;
+  }
+
   .main_heading {
     font-family: Montserrat;
     font-size: 24px;
