@@ -45,21 +45,39 @@ main {
 }
 
 .main_button {
-  width: 298px;
-  height: 82px;
-  background-color: rgba(165, 42, 42, 0);
+  min-width: 298px;
+  max-width: 500px;
+  min-height: 71px;
+  border-radius: 20px;
+  border: 6px;
   background-image: url("./img/button.png");
+  background-repeat: no-repeat;
   background-size: cover;
-  border: none;
   font-family: "Roboto Condensed";
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 700;
   color: white;
   cursor: pointer;
+  word-wrap: break-word;
 }
 
 .main_button:hover {
   opacity: 0.8;
+}
+
+.button_border {
+  background: linear-gradient(
+    0deg,
+    rgba(117, 12, 127, 1) 0%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  width: fit-content;
+  min-width: 298px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
 }
 
 .main_right-container {
@@ -77,38 +95,58 @@ main {
   position: relative;
 }
 
-.bonus-img {
+.bonus {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 277px;
-  height: 173px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    rgba(232, 160, 0, 1) 0%,
+    rgba(228, 135, 0, 1)
+  );
+
+  padding: 6px;
+  border-radius: 15px;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
 }
 
 .bonus_text {
-  position: absolute;
   left: 0;
   bottom: 0;
-  padding-left: 5%;
-  padding-bottom: 5%;
+  padding: 14px 12px;
+  background-image: url("./img/bonus.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  max-width: 500px;
+  min-width: 250px;
 }
 
 .bonus_heading {
   text-align: center;
   font-family: "Roboto Condensed";
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 700;
   margin: 0;
+  overflow-wrap: break-word;
+  margin-bottom: 10px;
 }
 
 .bonus_paragraph {
   text-align: center;
   font-family: "Open Sans";
-  font-size: 24px;
-  font-weight: 400;
-  max-width: 225px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
   width: 100%;
   margin: 0;
+  opacity: 0.7;
+  overflow-wrap: break-word;
 }
 
 .bullets {
@@ -199,37 +237,37 @@ main {
   }
 
   .main_button {
-    width: 166px;
-    height: 46px;
-    font-size: 24px;
+    min-height: 56px;
+    min-width: 166px;
+    max-width: 300px;
+    font-size: 32px;
+    border-radius: 15px;
+  }
+
+  .button_border {
+    min-width: 166px;
+    width: 33%;
   }
   .main_img-container {
     width: 420px;
     height: 338px;
   }
 
-  .bonus-img {
-    width: 223px;
-    height: 129px;
+  .bonus {
+    bottom: -70px;
     left: 50%;
-    transform: translate(-50%);
-    bottom: -20%;
+    -webkit-transform: translate(-50%);
   }
+
   .bonus_heading {
-    font-size: 30px;
+    font-size: 24px;
+    max-width: 300px;
   }
   .bonus_paragraph {
     font-size: 20px;
     max-width: 167px;
     margin: 0 auto;
-    font-size: 14px;
-    max-width: 150px;
-  }
-  .bonus_text {
-    left: 48%;
-    transform: translate(-50%);
-    width: 100%;
-    bottom: -19%;
+    max-width: 300px;
   }
 
   .bullets {
