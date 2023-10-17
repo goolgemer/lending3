@@ -243,14 +243,14 @@ main {
   .main_button {
     min-height: 56px;
     min-width: 166px;
-    max-width: 300px;
+    max-width: 320px;
     font-size: 32px;
     border-radius: 15px;
   }
 
   .button_border {
     min-width: 166px;
-    width: 33%;
+    width: fit-content;
   }
   .main_img-container {
     width: 420px;
